@@ -1,0 +1,125 @@
+
+概述：HTML 是骨架，与一些默认的样式，CSS是用来更改样式的。
+
+1.创建页面
+
+2.先想大概结构
+
+3.用CSS调整位置和设置样式
+
+两个案例：
+
+A在最左面 C在最右面 B占剩下的
+
++++++++++++++++++++++++++++++++++++
+|       |                 |        |
+|  A    |        B        |   C    |
+|       |                 |        |
++++++++++++++++++++++++++++++++++++
+
+flex-grow 1
+
+A在最右面
++++++++++++++++++++++++++++++++++++
+|                         |        |
+|                         |   A    |
+|                         |        |
++++++++++++++++++++++++++++++++++++
+
+flex-direction: row-reverse
+
+
+Apple meta (https://developer.apple.com/library/safari/documentation
+/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,
+  maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+
+
+#操作字符串的能力是否代表了编程能力
+
+
+AM(AlipayMobileOpenSolution 使您的移动网站达到性能高效，兼容性以及良好的用户体验)
+http://am-team.github.io/default.html
+
+#最佳实践
+不建议使用jquery作为移动web的类库，推荐轻量级类库yocto等类库
+不推荐使用mv*模式库例如angularjs进行无线web开发
+对于带有图片的长列表，需要做好性能上的优化处理，特别是对于图片方面的优化，这个直接会影响到页面性能 - 参考资料
+
+#事实证明，在2G或者弱3G信号环境下连续超过3次以上的301/302，用户将会放弃此次浏览
+
+
+
+----------
+
+1、考虑到HTML的语义化，页面如果全部 div 就不合适了。
+2、标签自带一些属性在 chrome 里面是 'user agent stylesheet'
+    换句话说这些标签是浏览器自己定义了一些样式。
+    例如
+      #<address>
+        i, cite, em, var, address, dfn {
+            font-style: italic;
+        }
+        user agent stylesheetaddress {
+            display: block;
+        }
+      #<article>
+        article, aside, footer, header, hgroup, main, nav, section {
+            display: block;
+        }
+      #<div>
+        div {
+            display: block;
+        }
+3、其实新增的一些标签，也是定义了一些样式，换句话说就是根据css来自定义标签，但是这个自定义是由浏览器来实现的。
+这样更符合语义化，就像在android上，官方提供的控件 TextView ListView ScrollerView，但是你也可以自定义控件。
+4、规定一个标签是块状元素还是行内元素，其实就是设置了display:block样式
+
+
+5、语义化：
+ 1、http://www.css88.com/archives/1668
+ 2、http://www.lingdublog.com/103.html
+ 3、http://ued.sina.com.cn/?p=157
+
+6、html 标签列表 https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element
+
+7、html 标签属性列表 https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes
+
+8、卧槽还真的有自定义html标签耶！！！http://www.html5rocks.com/zh/tutorials/webcomponents/customelements/
+
+9、html 适用与全部标签的属性 https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes
+
+10、待看两个github
+    https://github.com/amfe/ml
+    https://github.com/amfe/lib-flexible
+
+11、语义化
+    对于内容排版的需要语义化
+    但是对于控件的排版还需要语义化吗？因为在手机上的设计图一般都是需要修改的样式的，还需要再用一个<h1></h1> 然后修改样式吗？
+**************************************************
+我理解的前端开发
+
+一、起始和android手机开发差不多，下面是几点不一样的地方
+1、手机屏幕不是自动滚动，而浏览器默认就是可以滚动，就是超出的区域也可以显示
+2、<RelativeLayout> 就是相对于 <p><div> 的块状元素（块状元素是通过CSS来控制的）
+3、stye文件 就相当于 CSS 文件。
+4、js 就相当于 java 代码操作逻辑
+
+++++++++++++++++++++++++++++++
+|  style  |  xml    |  java  |
+|  css    |  html   |  js    |
+++++++++++++++++++++++++++++++
+
+代码是不同的但是思想是一致的
+
+二、CSS是根基，由CSS来组成标签，官方把一些CSS组合起来搞了一些有‘语义化’的标签。如果你觉得这些标签太难看，你可以增加属性或者直接覆盖属性。
+
+三、其实要考虑的是三者的组合，不能单独分开的去想（浏览器 HTML CSS）
+
+四、页面你全部用 DIV 再自己定义css也能够实现。如果浏览器允许开发人员自定义标签就更爽歪歪了（类似android自定义view）
+
+五、浏览器块状CSS容器和android还不一样，浏览器里面还有溢出的概念，如果溢出了还可以显示出来，但是在android上溢出了就显示不出来了。
+（这个刚开始感觉很奇怪的问题，浏览器这么做或许是因为手机屏幕是固定不变的，而浏览器在浏览的过程中还可以放大变小的缘故吧）
