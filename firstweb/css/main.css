@@ -1,0 +1,174 @@
+/*背景颜色*/
+body {
+  background-color: #f8f8f8;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Item*/
+#order-item-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/*头部*/
+#order-item-header {
+  display: flex;
+  flex-direction: row;
+  height: 43px;
+  align-items: center;
+}
+
+/*下单时间图标*/
+#order-item-header-time-img {
+  width: 18px;
+  height: 18px;
+  margin-left: 15px;
+  background: url("../img/orders_list_time.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+/*下单时间*/
+#order-item-header-time-text {
+  flex-grow: 1;
+  margin-left: 6px;
+  color: #5e6064;
+  font-size: 14px;
+}
+
+/*订单状态*/
+#order-item-header-time-state {
+  color: #07b9ec;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+/*分割线*/
+#order-item-line {
+  height: 1px;
+  background-color: #dcdcdc;
+}
+
+#order-item-goods_image {
+  width: 68px;
+  height: 68px;
+}
+
+#order-item-goods_image_border {
+  width: 69px;
+  height: 69px;
+  margin: 13px;
+  background-color: #dcdcdc;
+  padding: 1px;
+}
+
+#order-item-center {
+  display: flex;
+  flex-direction: row;
+}
+
+#order-item-center_title_gtuige {
+  flex-grow: 1;
+}
+
+#order-item-center_title {
+  margin-top: 19px;
+  font-size: 16px;
+  color: #5e6064;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#order-item-center_guige {
+  margin-top: 9px;
+  font-size: 13px;
+  color: #838383;
+}
+
+#order-item-center_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#order-item-center_price {
+  margin-top: 19px;
+  color: #5e6064;
+  margin-right: 15px;
+  font-size: 13px;
+}
+
+#order-item-center_num {
+  font-size: 13px;
+  margin-right: 15px;
+  color: #a7a5a5;
+  margin-top: 9px;
+}
+
+#order-item_reduce_num {
+  display: flex;
+  flex-direction: column;
+}
+
+#order-item_reduce_num_tv {
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #838383;
+  font-size: 14px;
+}
+
+#order-item-bottom {
+  display: flex;
+  height: 43px;
+  flex-direction: row;
+  align-items: center;
+}
+
+#order-item-bottom_num {
+  margin-left: 15px;
+  font-size: 14px;
+  color: #838383;
+}
+
+#order-item-bottom_img {
+  margin-left: 11px;
+  margin-right: 11px;
+}
+
+#order-item-bottom_tag {
+  font-size: 14px;
+  color: #838383;
+}
+
+#order-item-bottom_total_price {
+  color: #ff6c00;
+  font-size: 15px;
+}
+
+#order-item-operate_area {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#order-item-operate_btn {
+  border: 1px orange solid;
+  border-radius:8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: orange;
+  font-size: 14px;
+  background-color: white;
+}
